@@ -297,6 +297,8 @@ get_message2(Jabber=#jabber{type = 'auth_sasl'}) ->
     auth_sasl(Jabber,"PLAIN");
 get_message2(Jabber=#jabber{type = 'auth_sasl_anonymous'}) ->
     auth_sasl(Jabber,"ANONYMOUS");
+get_message2(Jabber=#jabber{type = 'auth_sasl_tbs'}) ->
+    auth_sasl(Jabber,"TBS-SSO-AUTH");
 get_message2(Jabber=#jabber{type = 'auth_sasl_bind'}) ->
     auth_sasl_bind(Jabber);
 get_message2(Jabber=#jabber{type = 'auth_sasl_session'}) ->
